@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Donations</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: medium;
+            font-style: normal;
+            scroll-behavior: smooth;
+        }
+
+        /* Common styles for donation and contact sections */
+        .section {
+            background-size: cover;
+            background-position: center;
+            font-size: medium;
+            font-style: normal;
+            overflow-y: auto;
+            position: relative;
+            margin-top: 0;
+        }
+
+        /* Donation Section */
+        .don-section {
+            background-image: url('servicesbg.jpg');
+            background-color: #0F1035;
+            padding: 60px 0; /* Adjusted padding for better spacing */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .don-section .don-box {
+            width: 100%;
+            margin-bottom: 20px;
+            background-color: transparent;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #0F1035;;
+            transition: all 0.5s;
+        }
+
+        .don-section .don-box img {
+            width: 70px;
+            transition: all 0.5s;
+        }
+
+        .don-section .don-box h3 {
+            margin: 15px 0 10px;
+            color: #0F1035; /* Adjusted text color for better visibility */
+        }
+
+        .don-section .don-box p {
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .don-section .don-box a.btn1 {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0F1035;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .don-section .don-box:hover {
+            box-shadow: 0 0 20px #162938;
+        }
+
+        .don-section .don-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .don-section .don-box:hover a.btn1 {
+            background-color: #fff;
+            color: #0F1035;
+        }
+
+        /* Back button style */
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #0F1035;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .back-button:hover {
+            background-color: #fff;
+            color: #0F1035;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-image: url('servicesbg.jpg');
+            background-color: rgb(22, 68, 95);
+            padding: 60px 0; /* Adjusted padding for better spacing */
+            color: #fff; /* Added text color for better visibility */
+        }
+
+        .contact-form-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #0F1035;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* Added margin-top to separate from donation boxes */
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form .form-control {
+            border-radius: 5px;
+        }
+
+        .contact-form textarea.form-control {
+            height: 120px;
+            border-radius: 5px;
+        }
+
+        .contact-form .col-md-12 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button class="back-button" onclick="goBack()">Back</button>
+    </header>
+
+  
+    <section class="don-section" id="donation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="don-box">
+                        <h3>Helping Hand</h3>
+                        <p>A little help from you to the old age home might brighten up someone's day.</p>
+                        <a href="#contactSection" class="btn1" onclick="showContactForm('helpinghand')">Donate Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="don-box">
+                        <h3>Pagaria Welfare Foundation</h3>
+                        <p>Aims to provide, guide, educate and create awareness about social issues.</p>
+                        <a href="#contactSection" class="btn1" onclick="showContactForm('pagaria')">Donate Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="don-box">
+                        <h3>Kharghar Yuva Centre</h3>
+                        <p>Contribute funds and clothes to Kharghar Yuva Centre.</p>
+                        <a href="#contactSection" class="btn1" onclick="showContactForm('kharghar')">Donate Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="don-box">
+                        <h3>Tarai Environment Awareness Samiti</h3>
+                        <p>Donate clothes and food to Tarai Environment Awareness Samiti.</p>
+                        <a href="#contactSection" class="btn1" onclick="showContactForm('tarai')">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and your custom script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script (1).js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>
